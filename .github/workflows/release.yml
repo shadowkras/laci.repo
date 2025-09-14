@@ -1,4 +1,4 @@
-name: Triggered by Client Release
+name: Update plogonmaster
 
 on:
   repository_dispatch:
@@ -8,27 +8,39 @@ jobs:
   react:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Update plogonmaster.json
         shell: pwsh
         run: |
+          $timestamp = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
+          $apiLevel = ${{ github.event.client_payload.api_level }}
           $tag = '${{ github.event.client_payload.tag }}'
           $assetUrl = '${{ github.event.client_payload.asset_url }}'
           $path = './plogonmaster.json'
 
-          $json = Get-Content -Raw $path | ConvertFrom-Json
+          $json = Get-Content $path | ConvertFrom-Json
 
-          $json[0].AssemblyVersion = $tag
-          $json[0].DownloadLinkInstall = $assetUrl
-          $json[0].DownloadLinkUpdate = $assetUrl
+          $json[0].LastUpdate = $timestamp
+
+          if (!$${{ github.event.client_payload.is_testing }})
+          {
+            $json[0].DalamudApiLevel = $apiLevel
+            $json[0].AssemblyVersion = $tag
+            $json[0].DownloadLinkInstall = $assetUrl
+            $json[0].DownloadLinkUpdate = $assetUrl
+          }
+          else
+          {
+            $json[0].TestingDalamudApiLevel = $apiLevel
+            $json[0].TestingAssemblyVersion = $tag
+            $json[0].DownloadLinkTesting = $assetUrl
+          }
 
           $json | ConvertTo-Json -AsArray | Set-Content -Path $path
       - name: Commit plogonmaster.json
         run: |
-          git config --global user.name "Actions User"
-          git config --global user.email "actions@github.com"
-          git fetch origin main
-          git checkout main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add plogonmaster.json
-          git commit -m "ci: Updating plogonmaster.json for ${{ github.event.client_payload.tag }}" || true
-          git push origin main
+          git commit -m "ci: Update plogonmaster.json for ${{ github.event.client_payload.tag }}" || true
+          git push
