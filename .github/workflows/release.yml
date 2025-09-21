@@ -3,6 +3,20 @@ name: Update plogonmaster
 on:
   repository_dispatch:
     types: [new-release]
+  workflow_dispatch:  # Add this for manual testing
+    inputs:
+      tag:
+        description: 'Tag'
+        required: true
+      is_testing:
+        description: 'Is Testing'
+        type: boolean
+      api_level:
+        description: 'API Level'
+        required: true
+      asset_url:
+        description: 'Asset URL'
+        required: true
 
 jobs:
   react:
