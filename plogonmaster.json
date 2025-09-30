@@ -8,7 +8,7 @@
     "AssemblyVersion": "1.11.28",
     "TestingAssemblyVersion": "1.12.0.2",
     "IsTestingExclusive": false,
-    "RepoUrl": "https://github.com/LaciSynchroni/client",
+    "RepoUrl": "https://github.com/shadowkras/laci.client",
     "ApplicableVersion": "any",
     "DalamudApiLevel": 13,
     "TestingDalamudApiLevel": 13,
