@@ -13,9 +13,9 @@
     "DalamudApiLevel": 13,
     "TestingDalamudApiLevel": 13,
     "LastUpdate": 1758822321,
-    "DownloadLinkInstall": "https://github.com/shadowkras/laci.client/archive/refs/tags/v2.0.0.zip",
-    "DownloadLinkUpdate": "https://github.com/shadowkras/laci.client/archive/refs/tags/v2.0.0.zip",
-    "DownloadLinkTesting": "https://github.com/shadowkras/laci.client/archive/refs/tags/v2.0.0.zip",
+    "DownloadLinkInstall": "https://github.com/shadowkras/laci.client/releases/download/v2.0.0/LaciSynchroni.v2.0.0.zip",
+    "DownloadLinkUpdate": "https://github.com/shadowkras/laci.client/releases/download/v2.0.0/LaciSynchroni.v2.0.0.zip",
+    "DownloadLinkTesting": "https://github.com/shadowkras/laci.client/releases/download/v2.0.0/LaciSynchroni.v2.0.0.zip",
     "IconUrl": "https://raw.githubusercontent.com/LaciSynchroni/repo/main/images/icon.png"
   }
 ]
