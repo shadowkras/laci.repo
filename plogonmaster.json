@@ -5,17 +5,17 @@
     "Punchline": "Let others see you as you see yourself.",
     "Description": "Connect to multiple servers at once to share how you look to those you're paired with.",
     "InternalName": "LaciSynchroni",
-    "AssemblyVersion": "2.0.4",
-    "TestingAssemblyVersion": "2.0.4",
+    "AssemblyVersion": "2.0.5",
+    "TestingAssemblyVersion": "2.0.5",
     "IsTestingExclusive": false,
     "RepoUrl": "https://github.com/shadowkras/laci.client",
     "ApplicableVersion": "any",
     "DalamudApiLevel": 13,
     "TestingDalamudApiLevel": 13,
     "LastUpdate": 1758822321,
-    "DownloadLinkInstall": "https://github.com/shadowkras/laci.client/releases/download/2.0.4/LaciSynchroni_v2.0.4.zip",
-    "DownloadLinkUpdate": "https://github.com/shadowkras/laci.client/releases/download/2.0.4/LaciSynchroni_v2.0.4.zip",
-    "DownloadLinkTesting": "https://github.com/shadowkras/laci.client/releases/download/2.0.4/LaciSynchroni_v2.0.4.zip",
+    "DownloadLinkInstall": "https://github.com/shadowkras/laci.client/releases/download/2.0.5/LaciSynchroni_v2.0.5.zip",
+    "DownloadLinkUpdate": "https://github.com/shadowkras/laci.client/releases/download/2.0.5/LaciSynchroni_v2.0.5.zip",
+    "DownloadLinkTesting": "https://github.com/shadowkras/laci.client/releases/download/2.0.5/LaciSynchroni_v2.0.5.zip",
     "IconUrl": "https://raw.githubusercontent.com/LaciSynchroni/repo/main/images/icon.png"
   }
 ]
